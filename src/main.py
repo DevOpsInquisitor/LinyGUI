@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# LinyGUI - Elegant Image Compression Tool
+# LinyGUI - Elegant Image Compression Tool (v1.1.3)
 # Copyright (c) 2026 DevOpsInquisitor
 # Licensed under MIT License
 
