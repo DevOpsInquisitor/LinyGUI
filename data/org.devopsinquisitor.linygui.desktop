@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=LinyGUI
+GenericName=Image Compressor
+Comment=Elegant image compression powered by TinyPNG
+Exec=linygui
+Icon=org.devopsinquisitor.linygui
+Terminal=false
+Type=Application
+Categories=Graphics;ImageProcessing;
+Keywords=compress;image;png;jpeg;webp;tinypng;optimize;resize;
+StartupNotify=true

@@ -1,0 +1,268 @@
+/* ============================================
+   LinyGUI — Minimal Dark Theme (Apple-inspired)
+   Copyright (c) 2026 DevOpsInquisitor
+   ============================================ */
+
+/* ---- Window ---- */
+.linygui-window {
+  background-color: #1c1c1e;
+}
+
+.main-container {
+  background: transparent;
+}
+
+/* ---- Header Bar ---- */
+.header-bar-glass {
+  background-color: rgba(28, 28, 30, 0.95);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  min-height: 38px;
+  box-shadow: none;
+}
+
+.headerbar-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* ---- Branding ---- */
+.app-title {
+  font-size: 26px;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+}
+
+.app-subtitle {
+  font-size: 12px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.4);
+  letter-spacing: 0.3px;
+}
+
+/* ---- Tab Switcher ---- */
+.tab-switcher {
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 10px;
+  padding: 3px;
+}
+
+.tab-button {
+  border-radius: 8px;
+  padding: 7px 22px;
+  margin: 0 1px;
+  font-size: 13px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.45);
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  outline: none;
+  min-height: 0;
+  min-width: 80px;
+  transition: all 150ms ease;
+}
+
+.tab-button:hover {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.tab-button:checked {
+  background: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* ---- Drop Zone ---- */
+.drop-zone {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1.5px dashed rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  padding: 32px;
+  transition: all 200ms ease;
+}
+
+.drop-zone:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.drop-zone-active {
+  background: rgba(120, 90, 255, 0.08);
+  border-color: rgba(120, 90, 255, 0.5);
+  border-style: solid;
+}
+
+.drop-zone-icon-img {
+  opacity: 0.85;
+  margin-bottom: 4px;
+}
+
+.drop-zone-icon {
+  font-size: 40px;
+  color: rgba(255, 255, 255, 0.25);
+}
+
+.drop-zone-text {
+  font-size: 14px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.drop-zone-hint {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.25);
+  letter-spacing: 0.5px;
+}
+
+/* ---- Accent Button ---- */
+.accent-button {
+  background: #785AFF;
+  border-radius: 10px;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 12px 24px;
+  border: none;
+  box-shadow: none;
+  min-height: 0;
+  transition: all 150ms ease;
+}
+
+.accent-button:hover {
+  background: #6A4FE6;
+}
+
+.accent-button:active {
+  background: #5C42CC;
+}
+
+/* ---- Glass Panel ---- */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 14px;
+  padding: 20px;
+}
+
+/* ---- Progress Bar ---- */
+progressbar trough {
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 4px;
+  min-height: 4px;
+  border: none;
+}
+
+progressbar progress {
+  background: #785AFF;
+  border-radius: 4px;
+  min-height: 4px;
+}
+
+/* ---- Entry Fields ---- */
+.glass-entry {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  color: #ffffff;
+  padding: 8px 12px;
+  font-size: 13px;
+  caret-color: #785AFF;
+  transition: all 150ms ease;
+}
+
+.glass-entry:focus {
+  border-color: rgba(120, 90, 255, 0.5);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.glass-entry image {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+/* ---- Settings Row ---- */
+.settings-row {
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 12px;
+  padding: 14px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.settings-label {
+  font-size: 13px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.settings-description {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.35);
+}
+
+/* ---- Switch ---- */
+switch {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 14px;
+  border: none;
+  min-width: 42px;
+  min-height: 22px;
+}
+
+switch:checked {
+  background: #785AFF;
+}
+
+switch slider {
+  background: #ffffff;
+  border-radius: 50%;
+  min-width: 18px;
+  min-height: 18px;
+  margin: 2px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* ---- Mode Buttons ---- */
+.mode-button {
+  border-radius: 8px;
+  padding: 7px 16px;
+  margin: 0 2px;
+  font-size: 12px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.4);
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  min-height: 0;
+  min-width: 54px;
+  transition: all 150ms ease;
+}
+
+.mode-button:checked {
+  background: rgba(120, 90, 255, 0.15);
+  color: #a78bfa;
+  border-color: rgba(120, 90, 255, 0.3);
+}
+
+/* ---- Status Text ---- */
+.placeholder-sub {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.result-text {
+  font-size: 13px;
+  color: #34d399;
+  font-weight: 500;
+}
+
+.error-text {
+  font-size: 13px;
+  color: #f87171;
+  font-weight: 500;
+}
+
+/* ---- Footer ---- */
+.footer-text {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.2);
+}
