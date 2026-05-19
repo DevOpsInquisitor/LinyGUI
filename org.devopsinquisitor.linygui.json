@@ -65,8 +65,9 @@
             ],
             "sources": [
                 {
-                    "type": "dir",
-                    "path": "."
+                    "type": "git",
+                    "url": "https://github.com/devopsinquisitor/LinyGUI.git",
+                    "tag": "v1.0.0"
                 }
             ]
         }
