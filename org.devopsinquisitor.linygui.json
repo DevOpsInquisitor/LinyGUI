@@ -14,50 +14,12 @@
     ],
     "modules": [
         {
-            "name": "python3-tinify",
-            "buildsystem": "simple",
-            "build-commands": [
-                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} tinify"
-            ],
-            "sources": [
-                {
-                    "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/c5/d5/c69b37f497c06b68759ae072ee301953165668db7dc670968ea84f889889/tinify-1.7.1.tar.gz",
-                    "sha256": "76307e68775ac04f8175105056d0189052ea28cfa13fc2368efdaaf04fa46a66"
-                },
-                {
-                    "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/ac/c3/e2a2b89f2d3e2179abd6d00ebd70bff6273f37fb3e0cc209f48b39d00cbf/requests-2.34.2.tar.gz",
-                    "sha256": "f288924cae4e29463698d6d60bc6a4da69c89185ad1e0bcc4104f584e960b9ed"
-                },
-                {
-                    "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/53/0c/06f8b233b8fd13b9e5ee11424ef85419ba0d8ba0b3138bf360be2ff56953/urllib3-2.7.0.tar.gz",
-                    "sha256": "231e0ec3b63ceb14667c67be60f2f2c40a518cb38b03af60abc813da26505f4c"
-                },
-                {
-                    "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/82/77/7b3966d0b9d1d31a36ddf1746926a11dface89a83409bf1483f0237aa758/idna-3.15.tar.gz",
-                    "sha256": "ca962446ea538f7092a95e057da437618e886f4d349216d2b1e294abfdb65fdc"
-                },
-                {
-                    "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/e7/a1/67fe25fac3c7642725500a3f6cfe5821ad557c3abb11c9d20d12c7008d3e/charset_normalizer-3.4.7.tar.gz",
-                    "sha256": "ae89db9e5f98a11a4bf50407d4363e7b09b31e55bc117b4f7d80aab97ba009e5"
-                },
-                {
-                    "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/25/ee/6caf7a40c36a1220410afe15a1cc64993a1f864871f698c0f93acb72842a/certifi-2026.4.22.tar.gz",
-                    "sha256": "8d455352a37b71bf76a79caa83a3d6c25afee4a385d632127b6afb3963f1c580"
-                }
-            ]
-        },
-        {
             "name": "linygui",
             "buildsystem": "simple",
             "build-commands": [
                 "install -Dm755 src/main.py ${FLATPAK_DEST}/bin/linygui",
                 "install -Dm644 src/window.py ${FLATPAK_DEST}/lib/linygui/window.py",
+                "install -Dm644 src/tinify.py ${FLATPAK_DEST}/lib/linygui/tinify.py",
                 "install -Dm644 src/linygui.css ${FLATPAK_DEST}/lib/linygui/linygui.css",
                 "install -Dm644 src/__init__.py ${FLATPAK_DEST}/lib/linygui/__init__.py",
                 "install -Dm644 data/org.devopsinquisitor.linygui.desktop ${FLATPAK_DEST}/share/applications/org.devopsinquisitor.linygui.desktop",
@@ -66,7 +28,7 @@
             "sources": [
                 {
                     "type": "git",
-                    "url": "https://github.com/devopsinquisitor/LinyGUI.git",
+                    "url": "https://github.com/DevOpsInquisitor/LinyGUI.git",
                     "tag": "v1.0.0"
                 }
             ]
