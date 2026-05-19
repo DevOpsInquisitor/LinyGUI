@@ -17,8 +17,8 @@
             "name": "linygui",
             "buildsystem": "simple",
             "build-commands": [
-                "install -Dm755 src/main.py ${FLATPAK_DEST}/bin/linygui",
-                "install -Dm644 src/window.py ${FLATPAK_DEST}/lib/linygui/window.py",
+                "install -D -m 755 src/main.py ${FLATPAK_DEST}/bin/linygui",
+                "install -D -m 644 src/window.py ${FLATPAK_DEST}/lib/linygui/window.py",
                 "install -Dm644 src/tinify.py ${FLATPAK_DEST}/lib/linygui/tinify.py",
                 "install -Dm644 src/linygui.css ${FLATPAK_DEST}/lib/linygui/linygui.css",
                 "install -Dm644 src/__init__.py ${FLATPAK_DEST}/lib/linygui/__init__.py",
@@ -30,7 +30,7 @@
                 {
                     "type": "git",
                     "url": "https://github.com/DevOpsInquisitor/LinyGUI.git",
-                    "tag": "v1.1.0"
+                    "tag": "v1.1.1"
                 }
             ]
         }
