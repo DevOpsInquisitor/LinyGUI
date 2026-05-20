@@ -49,18 +49,26 @@ class LinyGuiApp(Adw.Application):
         if not win:
             win = LinyGuiWindow(application=self)
 
-            # Set window icon from icon.png
-            src_dir = os.path.dirname(os.path.abspath(__file__))
-            icon_dir = os.path.dirname(src_dir)
-            icon_path = os.path.join(icon_dir, "icon.png")
-            if os.path.exists(icon_path):
-                try:
-                    # GTK4 uses IconTheme to resolve window icons by name
-                    icon_theme = Gtk.IconTheme.get_for_display(Gdk.Display.get_default())
-                    icon_theme.add_search_path(icon_dir)
-                    win.set_icon_name("icon")
-                except Exception:
-                    pass
+            # Set window icon using the proper app ID.
+            # Works in AppImage (XDG_DATA_DIRS set by AppRun),
+            # Flatpak (icon installed to /app/share), and dev runs.
+            try:
+                icon_theme = Gtk.IconTheme.get_for_display(Gdk.Display.get_default())
+                src_dir = os.path.dirname(os.path.abspath(__file__))
+                # For AppImage: icons are at <HERE>/usr/share/icons/...
+                # add_search_path expects the base 'share' directory
+                appimage_share = os.path.normpath(
+                    os.path.join(src_dir, "..", "..", "share")
+                )
+                if os.path.isdir(appimage_share):
+                    icon_theme.add_search_path(appimage_share)
+                # For dev runs: icon lives in project root
+                dev_root = os.path.normpath(os.path.join(src_dir, ".."))
+                if os.path.isdir(dev_root):
+                    icon_theme.add_search_path(dev_root)
+                win.set_icon_name("org.devopsinquisitor.linygui")
+            except Exception:
+                pass
 
         win.present()
 
